@@ -6,6 +6,32 @@ s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.g
 t.Talk={ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l.push([f])},catch:function(){return k&&new k()},c:l}};
 })(window,document,[]);
 </script>
+<script>
+function chatWithMartin(){
+    var user = new Talk.User({
+        id: '3',
+        name: 'Martin Jarcik',
+        email: 'martin@teflon.com',
+        photoUrl: 'https://talkjs.com/docs/img/ronald.jpg',
+        welcomeMessage: 'Martin, how can I help?'
+    });
+
+    var conversation = talkSession.getOrStartConversation(user);
+}
+function chatWithRonald(){
+    var user = new Talk.User({
+        id: "54321",
+        name: "Ronald Raygun",
+        email: "ronald@teflon.com",
+        photoUrl: "https://talkjs.com/docs/img/ronald.jpg",
+        welcomeMessage: "Hey, how can I help?"
+    });
+
+    var conversation = talkSession.getOrStartConversation(user);
+}
+
+    </script>
+<div id="available-users"><a href="#" onclick="chatWithMartin();">Martin</a> <a href="#" onclick="chatWithRonald();">Ronald</a></div>
 <div id="talkjs-container" style="width: calc(100% - 60px); margin: 30px; min-height: 150px"></div>
 <script>
 Talk.ready.then(function() {
