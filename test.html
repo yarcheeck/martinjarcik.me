@@ -9,7 +9,7 @@ t.Talk={ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])}
 <div id="talkjs-container" style="width: calc(100% - 60px); margin: 30px; min-height: 150px"></div>
 <script>
 Talk.ready.then(function() {
-    var me = new Talk.User({
+    var other = new Talk.User({
         id: "12345",
         name: "George Looney",
         email: "george@looney.net",
@@ -20,7 +20,7 @@ Talk.ready.then(function() {
         appId: "tuDypeQR",
         me: me
     });
-    var other = new Talk.User({
+    var me = new Talk.User({
         id: "54321",
         name: "Ronald Raygun",
         email: "ronald@teflon.com",
