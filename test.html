@@ -17,6 +17,8 @@ function chatWithMartin(){
     });
 
     var conversation = talkSession.getOrStartConversation(user);
+    var chatbox = talkSession.createChatbox(conversation);
+    chatbox.mount(document.getElementById("talkjs-container"));      
 }
 function chatWithRonald(){
     var user = new Talk.User({
@@ -28,6 +30,8 @@ function chatWithRonald(){
     });
 
     var conversation = talkSession.getOrStartConversation(user);
+    var chatbox = talkSession.createChatbox(conversation);
+    chatbox.mount(document.getElementById("talkjs-container"));      
 }
 
     </script>
